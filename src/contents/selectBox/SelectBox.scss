@@ -1,0 +1,45 @@
+.input-box-container{
+    width:420px;
+    .select-box{
+        width: 415px;
+        padding: 6px;
+        border-color: #ccc #efefef #efefef #ccc;
+        background-color: #ffffff;
+        border-width: 1px;
+        border-style: solid;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -o-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        color: #777;
+    }
+}
+.select-box-container-half{
+    width: 40%;
+    display: inline-grid;
+    margin-bottom: 10px;
+    .select-box-half{
+        border-color: #ccc #efefef #efefef #ccc;
+        border-width: 1px;
+        border-style: solid;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -o-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        color: #777;
+        width: 125px;
+        padding: 6px;
+        border-color: #ccc #efefef #efefef #ccc;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        color: #777;
+    }
+}
+
+
+
+
+

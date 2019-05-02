@@ -1,0 +1,5 @@
+export const FETCH_TARGET_RESIDUE_TYPE = "http://www.json-generator.com/api/json/get/ceYbpzsiNu?indent=2";
+export const SHOW_RINSE_PARAMETER = "CONFIGURE_RINSE_PARAMETER";
+export const HIDE_RINSE_PARAMETER = "DELETE_RINSE_PARAMETER";
+export const SHOW_SWAB_PARAMETER = "CONFIGURE_SWAB_PARAMETER";
+export const HIDE_SWAB_PARAMETER = "DELETE_SWAB_PARAMETER";
