@@ -11,23 +11,25 @@ class Button extends React.Component{
         isRequired: PropTypes.oneOf([true, false])
         //prop: PropTypes
     }
+    static defaultProps = {
+        addClass: `button-box-container`,
+        type: "button",
+        addInputStyle: '',
+        label: '',
+        isRequired: false
+    }
     constructor(props){
         super(props);
-        this.state = {
-            value: "",
-            type: (this.props && this.props.type ? this.props.type : "button"),
-            label: (this.props && this.props.label ? this.props.label : ""),
-            isRequired: (this.props && this.props.isRequired ? this.props.isRequired: false)
-        }
+        this.state = {}
     }
     
     render(){
         return(
-            <div className={(this.props.addClass ? this.props.addClass : `button-box-container`)}>
+            <div className={this.props.addClass}>
                 <input 
-                    type="button" 
-                    className={(this.props.addInputStyle ? this.props.addInputStyle : ``)}
-                    value={this.state.label}
+                    type={this.props.type} 
+                    className={this.props.addInputStyle}
+                    value={this.props.label}
                     onClick={this.props.updateFinalValue}
                     style={{cursor: 'pointer'}}
                 />
