@@ -8,7 +8,8 @@ class Button extends React.Component{
     static propTypes = {
         type: PropTypes.oneOf(["button"]),
         label: PropTypes.string,
-        isRequired: PropTypes.oneOf([true, false])
+        isRequired: PropTypes.oneOf([true, false]),
+        updateFinalValue: PropTypes.func
         //prop: PropTypes
     }
     static defaultProps = {

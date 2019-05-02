@@ -194,22 +194,25 @@ export default class Card extends Component {
                     {
                         (this.props.bioburdenComponents
                             ?
-                            <div style={{display: 'flex'}}>
-                                <label></label>
-                                {_.map([0,1], (el, i) => (
-                                    <MiniRadioButton 
-                                        key={i+"leuc"}
-                                        label={(i==0 ? "Yes" : "No")}
-                                        isRequired={false}
-                                        type={"radio"}
-                                        ref={(i==0) ? "recv_y" : "recv_n"}
-                                        name={"mini_recovery"}
-                                        addInputStyle={`input-box-half`}
-                                        addClass={`input-box-container-half`}
-                                        updateValue={this.getRadioButtonResponse.bind(this)}
-                                    />
-                                ))}
+                            <div style={{textAlign: "center"}}>
+                                <label><span className="mandatory-label">*</span>Use Recovery for swab?</label>
+                                <div style={{display: 'flex'}}>
+                                    {_.map([0,1], (el, i) => (
+                                        <MiniRadioButton 
+                                            key={i+"leuc"}
+                                            label={(i==0 ? "Yes" : "No")}
+                                            isRequired={false}
+                                            type={"radio"}
+                                            ref={(i==0) ? "recv_y" : "recv_n"}
+                                            name={"mini_recovery"}
+                                            addInputStyle={`input-box-half`}
+                                            addClass={`input-box-container-half`}
+                                            updateValue={this.getRadioButtonResponse.bind(this)}
+                                        />
+                                    ))}
+                                </div>
                             </div>
+                            
                             
                             :
                             null

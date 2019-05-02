@@ -8,27 +8,30 @@ class InputBox extends React.Component{
     static propTypes = {
         type: PropTypes.oneOf(["text", "number"]),
         label: PropTypes.string,
-        isRequired: PropTypes.oneOf([true, false])
+        isRequired: PropTypes.oneOf([true, false]),
+        updateValue: PropTypes.func
         //prop: PropTypes
     }
+    static defaultProps = {
+        type: "text",
+        isRequired: false,
+        addInputStyle: "input-box",
+        addClass: "input-box-container"
+    }
+
     constructor(props){
         super(props);
-        this.state = {
-            value: "",
-            type: (this.props && this.props.type ? this.props.type : "text"),
-            label: (this.props && this.props.label ? this.props.label : ""),
-            isRequired: (this.props && this.props.isRequired ? this.props.isRequired: false)
-        }
+        this.state = {}
     }
     
     render(){
         return(
-            <div className={(this.props.addClass ? this.props.addClass : `input-box-container`)}>
-                <label><span className="mandatory-label">{this.props.isRequired ? `*` : null}</span>{this.state.label}</label>
+            <div className={this.props.addClass}>
+                <label><span className="mandatory-label">{this.props.isRequired ? `*` : null}</span>{this.props.label}</label>
                 <input 
-                    required={true}
-                    type="text" 
-                    className={(this.props.addInputStyle ? this.props.addInputStyle : `input-box`)}
+                    required={this.props.isRequired}
+                    type={this.props.type}
+                    className={this.props.addInputStyle}
                     ref="input"
                     onBlur={this.props.updateValue}
                 />

@@ -4,7 +4,8 @@ import './DivButton.scss';
 
 export default class DivButton extends Component {
     static propTypes = {
-        text: PropTypes.string
+        text: PropTypes.string,
+        updateValue: PropTypes.func
     }
     constructor(props){
         super(props);
